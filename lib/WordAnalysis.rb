@@ -7,7 +7,9 @@ class WordAnalysis
     @words = Hash.new(0)
     num_word = @strings.split(' ')
     num_word.each do |word|
-      @words[word] += 1
+      if word.match(/[a-zA-Z\d]/)
+        @words[word] += 1
+      end
     end
     @words
   end

@@ -19,9 +19,13 @@ end
 
 it 'gives the three most common words' do
    expect(paragraph.top_three_words[0][0]).to eq('challenge')
+   expect(paragraph.top_three_words[1][0]).to eq('is')
+   expect(paragraph.top_three_words[2][0]).to eq('a')
 end
 
 it 'gives the three most common letters' do
+  expect(paragraph.top_three_letters[0][0]).to eq('l')
+  expect(paragraph.top_three_letters[1][0]).to eq('e')
   expect(paragraph.top_three_letters[2][0]).to eq('h')
 end
 
